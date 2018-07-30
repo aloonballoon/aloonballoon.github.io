@@ -1,0 +1,23 @@
+
+
+<form class="" action="<%= product_url %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  
+
+<label for="">Title
+<input type="text" name="product[title]" value="<%= @product.title %>">
+</label>
+<% @product.title %>
+
+<label for="">Description
+<input type="text" name="product[description]" value="<%= @product.description %>">
+</label>
+
+<label for="">Price
+<input type="text" name="product[price]" value="<%= @product.price %>">
+</label>
+
+<input type="submit" name="" value="Update Product">
+
+</form>

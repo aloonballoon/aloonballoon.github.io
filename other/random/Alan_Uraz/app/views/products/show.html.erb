@@ -1,0 +1,29 @@
+
+
+<%= @product.title %>
+<%= @product.price %>
+<%= @product.description %>
+
+<% @product.comments.each do |comment| %>
+<%= comment.body %>
+<form class="" action="<%= comment_url(comment) %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Remove Comment">
+
+<% end %>
+
+<a href="<%= edit_product_url(@product) %>">Edit Product</a>
+
+<h1>Add Comment</h1>
+
+<h1>My First Product</h1>
+<form class="" action="<%= product_comments_url(@product) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+<label for="">Body
+<input type="text" name="comment[body]" value="<%= @comment.body if @comment %>">
+</label>
+
+<input type="submit" name="" value="Add Comment">
+
+</form>

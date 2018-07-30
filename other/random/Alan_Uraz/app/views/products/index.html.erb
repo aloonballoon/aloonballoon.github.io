@@ -1,0 +1,5 @@
+
+<% @products.each do |product| %>
+<%= product.title %>
+<a href="<%= product_url(product) %>"><%= product.title %></a>
+<% end %>
