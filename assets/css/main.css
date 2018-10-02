@@ -1637,3 +1637,9 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+.inner p{
+	font-weight: 1000;
+	font-size: 20px !important;
+
+}
